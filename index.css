@@ -1,0 +1,88 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none; /* be CAREFULL only use when it would improve UX */
+}
+
+:root {
+  --input-bg-colour: #DCE1EB;
+  --input-f-colour: #432000; 
+
+  --btn-bg-colour: #AC485A;
+  --btn-bg-colour-hover: #432000;
+  --btn-f-colour: #FDFDFD;
+  
+  --li-bg-colour: #FFFDF8;
+  --li-bg-colour-hover: #FFECC7;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.flex--col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex--wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.app {
+  max-width: 320px;
+  margin: 30px auto;
+  gap: 1rem;
+}
+
+.app__img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.app__input,
+.app__button,
+.list__item {
+  padding: 1rem;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  border: none;
+  border-radius: .5rem;
+}
+
+.app__input {
+  background-color: var(--input-bg-colour);
+  color: var(--input-f-colour);
+}
+
+.app__button {
+  background-color: var(--btn-bg-colour);
+  color: var(--btn-f-colour);
+}
+
+.app__button:hover {
+  background-color: var(--btn-bg-colour-hover);
+  cursor: pointer;
+}
+
+.app__list {
+  padding: 0;
+  gap: .75rem;
+  list-style: none;
+}
+
+.list__item {
+  flex: 1;
+  background-color: --li-bg-colour;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2)
+}
+
+.list__item:hover {
+    background-color: var(--li-bg-colour-hover);
+    cursor: pointer;
+}
